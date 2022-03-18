@@ -1,0 +1,56 @@
+2019-11-04 19:07:25,681 线程ID:[10] 日志级别:[INFO ] : [{"billId":"1012762","billModuleCode":"GEPS.Capital.ZJWL.QTFKSQDModule","ccode":"24767-QTFKSQD-19/10/14-008","ddate":"2019-10-14 00:00:00","cbank":"北京银行股份有限公司金融港支行","cbankcode":"123456","caccount":"20000034957700017396094","cprojectcode":"0001","cprojectname":"房山启迪项目","ccosttype":"其他","csettletype":"XJ","famount":900.0,"ccusname":"安徽三建公司"}]
+2019-11-04 19:08:21,556 线程ID:[10] 日志级别:[INFO ] : [select pk_banktype from bd_banktype where CHARINDEX(banktypename,'北京银行股份有限公司金融港支行')=1]
+2019-11-04 19:08:21,556 线程ID:[10] 日志级别:[ERROR] : [DataHelper]
+System.Data.OleDb.OleDbException (0x80004005): [DBNETLIB][ConnectionOpen (Connect()).]SQL Server 不存在或拒绝访问。
+   在 System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   在 System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getStrResultFromSQLscript(String sql, String strType) 位置 d:\ufsoft\20190903\sourcecode\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 22
+2019-11-04 19:08:21,916 线程ID:[10] 日志级别:[INFO ] : [{"status":"success","data":"[{\"pk_bankdoc\":\"0001F81000000000MNM3\",\"pk_corp\":\"0001\",\"unitcode\":\"0001\",\"unitname\":\"集团\",\"bankdoccode\":\"123456\",\"bankdocname\":\"北京银行股份有限公司金融港支行\",\"pk_banktype\":\"0001F81000000000MNAU\",\"shortname\":\"北京银行股份有限公司金融港支行\",\"iscustbank\":false}]"}]
+2019-11-04 19:08:23,275 线程ID:[10] 日志级别:[INFO ] : [<?xml version="1.0" encoding='UTF-8'?>
+<ufinterface billtype="bankaccount" filename="custbankaccount_505e4c7f-0b36-4f31-927f-8849c7f34785.xml" isexchange="Y" proc="add" receiver="001001" replace="Y" roottag="sendresult" sender="gld" successful="Y">
+    <sendresult>
+        <billpk>
+        </billpk>
+        <bdocid>20000034957700017396094</bdocid>
+        <filename>custbankaccount_505e4c7f-0b36-4f31-927f-8849c7f34785.xml</filename>
+        <resultcode>1</resultcode>
+        <resultdescription>单据20000034957700017396094开始处理...
+单据20000034957700017396094处理完毕!</resultdescription>
+        <content></content>
+    </sendresult>
+</ufinterface>
+]
+2019-11-04 19:09:06,996 线程ID:[10] 日志级别:[INFO ] : [select pk_bankaccbas from [dbo].[bd_bankaccbas] where accountcode='20000034957700017396094']
+2019-11-04 19:09:07,012 线程ID:[10] 日志级别:[ERROR] : [DataHelper]
+System.Data.OleDb.OleDbException (0x80004005): [DBNETLIB][ConnectionOpen (Connect()).]SQL Server 不存在或拒绝访问。
+   在 System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   在 System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getStrResultFromSQLscript(String sql, String strType) 位置 d:\ufsoft\20190903\sourcecode\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 22
+2019-11-04 19:09:28,594 线程ID:[10] 日志级别:[INFO ] : [select pk_cubasdoc from [dbo].[bd_cubasdoc] where custname='安徽三建公司']
+2019-11-04 19:09:28,609 线程ID:[10] 日志级别:[ERROR] : [DataHelper]
+System.Data.OleDb.OleDbException (0x80004005): [DBNETLIB][ConnectionOpen (Connect()).]SQL Server 不存在或拒绝访问。
+   在 System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   在 System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getStrResultFromSQLscript(String sql, String strType) 位置 d:\ufsoft\20190903\sourcecode\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 22
+2019-11-04 19:09:29,141 线程ID:[10] 日志级别:[INFO ] : [{"status":"falied","errorcode":"-32000","errormsg":"20000034957700017396094银行账户不存在"}]

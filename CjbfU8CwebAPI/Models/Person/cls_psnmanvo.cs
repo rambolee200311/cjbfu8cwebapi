@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace CjbfU8CwebAPI.Models.Person
+{
+    public class cls_psnmanvo
+    {
+        public string amcode { get; set; }//助记码
+        public string clerkcode { get; set; }//业务员编号
+        public string clerkflag { get; set; }//业务员标志...
+        public string def1 { get; set; }//自定义项1
+        public string def10 { get; set; }//自定义项1...
+        public string def11 { get; set; }//自定义项1...
+        public string def12 { get; set; }//自定义项1...
+        public string def13 { get; set; }//自定义项1...
+        public string def14 { get; set; }//自定义项1...
+        public string def15 { get; set; }//自定义项1...
+        public string def16 { get; set; }//自定义项1...
+        public string def17 { get; set; }//自定义项1...
+        public string def18 { get; set; }//自定义项1...
+        public string def19 { get; set; }//自定义项1...
+        public string def2 { get; set; }//自定义项2
+        public string def20 { get; set; }//自定义项2...
+        public string def3 { get; set; }//自定义项3
+        public string def4 { get; set; }//自定义项4
+        public string def5 { get; set; }//自定义项5
+        public string def6 { get; set; }//自定义项6
+        public string def7 { get; set; }//自定义项7
+        public string def8 { get; set; }//自定义项8
+        public string def9 { get; set; }//自定义项9
+        public string indutydate { get; set; }//到职日期
+        public string outdutydate { get; set; }//离职日期
+        public string pk_deptdoc { get; set; }//部门
+        public string pk_psncl { get; set; }//人员类别
+        public string psncode { get; set; }//编码
+    }
+}

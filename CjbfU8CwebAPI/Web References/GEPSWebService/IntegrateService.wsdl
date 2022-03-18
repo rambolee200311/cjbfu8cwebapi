@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Integrate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="billType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IntegrateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IntegrateResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IntegrateSoapIn">
+    <wsdl:part name="parameters" element="tns:Integrate" />
+  </wsdl:message>
+  <wsdl:message name="IntegrateSoapOut">
+    <wsdl:part name="parameters" element="tns:IntegrateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IntegrateHttpGetIn">
+    <wsdl:part name="billType" type="s:string" />
+    <wsdl:part name="opType" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="strData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IntegrateHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="IntegrateHttpPostIn">
+    <wsdl:part name="billType" type="s:string" />
+    <wsdl:part name="opType" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="strData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IntegrateHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="IntegrateServiceSoap">
+    <wsdl:operation name="Integrate">
+      <wsdl:input message="tns:IntegrateSoapIn" />
+      <wsdl:output message="tns:IntegrateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IntegrateServiceHttpGet">
+    <wsdl:operation name="Integrate">
+      <wsdl:input message="tns:IntegrateHttpGetIn" />
+      <wsdl:output message="tns:IntegrateHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IntegrateServiceHttpPost">
+    <wsdl:operation name="Integrate">
+      <wsdl:input message="tns:IntegrateHttpPostIn" />
+      <wsdl:output message="tns:IntegrateHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IntegrateServiceSoap" type="tns:IntegrateServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Integrate">
+      <soap:operation soapAction="http://tempuri.org/Integrate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrateServiceSoap12" type="tns:IntegrateServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Integrate">
+      <soap12:operation soapAction="http://tempuri.org/Integrate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrateServiceHttpGet" type="tns:IntegrateServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Integrate">
+      <http:operation location="/Integrate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrateServiceHttpPost" type="tns:IntegrateServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Integrate">
+      <http:operation location="/Integrate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IntegrateService">
+    <wsdl:port name="IntegrateServiceSoap" binding="tns:IntegrateServiceSoap">
+      <soap:address location="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrateServiceSoap12" binding="tns:IntegrateServiceSoap12">
+      <soap12:address location="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrateServiceHttpGet" binding="tns:IntegrateServiceHttpGet">
+      <http:address location="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrateServiceHttpPost" binding="tns:IntegrateServiceHttpPost">
+      <http:address location="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

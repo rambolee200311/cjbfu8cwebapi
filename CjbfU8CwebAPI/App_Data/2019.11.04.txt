@@ -1,0 +1,48 @@
+2019-11-04 17:27:11,521 线程ID:[5] 日志级别:[INFO ] : [{"billId":"1012762","billModuleCode":"GEPS.Capital.ZJWL.QTFKSQDModule","ccode":"24767-QTFKSQD-19/10/14-008","ddate":"2019-10-14 00:00:00","cbank":"北京银行股份有限公司金融港支行","cbankcode":"123456","caccount":"20000034957700017396094","cprojectcode":"0001","cprojectname":"房山启迪项目","ccosttype":"其他","csettletype":"XJ","famount":900.0,"ccusname":"安徽三建公司"}]
+2019-11-04 17:27:30,388 线程ID:[5] 日志级别:[INFO ] : [select pk_banktype from bd_banktype where CHARINDEX(banktypename,'北京银行股份有限公司金融港支行')=1]
+2019-11-04 17:27:30,388 线程ID:[5] 日志级别:[ERROR] : [DataHelper]
+System.InvalidOperationException: ConnectionString 属性尚未初始化。
+   在 System.Data.OleDb.OleDbConnection.PermissionDemand()
+   在 System.Data.OleDb.OleDbConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getStrResultFromSQLscript(String sql, String strType) 位置 d:\ufsoft\20190903\sourcecode\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 21
+2019-11-04 17:27:36,188 线程ID:[5] 日志级别:[INFO ] : [{"status":"falied","errorcode":"","errormsg":"银行编码重复\n银行名称重复"}]
+2019-11-04 17:27:44,939 线程ID:[5] 日志级别:[INFO ] : [<?xml version="1.0" encoding='UTF-8'?>
+<ufinterface billtype="bankaccount" filename="custbankaccount_db3dc72a-e4aa-401d-81ab-a8dfb02674c1.xml" isexchange="Y" proc="add" receiver="001001" replace="Y" roottag="sendresult" sender="gld" successful="N">
+    <sendresult>
+        <billpk>
+        </billpk>
+        <bdocid>
+        </bdocid>
+        <filename>
+        </filename>
+        <resultcode>-31102</resultcode>
+        <resultdescription>交换环境初始化异常:用户权限不足：用户无登录权限或用户无指定公司使用权限！</resultdescription>
+        <content></content>
+    </sendresult>
+</ufinterface>
+]
+2019-11-04 17:27:52,080 线程ID:[5] 日志级别:[INFO ] : [select pk_bankaccbas from [dbo].[bd_bankaccbas] where accountcode='20000034957700017396094']
+2019-11-04 17:27:52,096 线程ID:[5] 日志级别:[ERROR] : [DataHelper]
+System.InvalidOperationException: ConnectionString 属性尚未初始化。
+   在 System.Data.OleDb.OleDbConnection.PermissionDemand()
+   在 System.Data.OleDb.OleDbConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getStrResultFromSQLscript(String sql, String strType) 位置 d:\ufsoft\20190903\sourcecode\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 21
+2019-11-04 17:27:59,413 线程ID:[5] 日志级别:[INFO ] : [select pk_cubasdoc from [dbo].[bd_cubasdoc] where custname='安徽三建公司']
+2019-11-04 17:27:59,413 线程ID:[5] 日志级别:[ERROR] : [DataHelper]
+System.InvalidOperationException: ConnectionString 属性尚未初始化。
+   在 System.Data.OleDb.OleDbConnection.PermissionDemand()
+   在 System.Data.OleDb.OleDbConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getStrResultFromSQLscript(String sql, String strType) 位置 d:\ufsoft\20190903\sourcecode\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 21
+2019-11-04 17:28:06,117 线程ID:[5] 日志级别:[INFO ] : [{"status":"falied","errorcode":"-32000","errormsg":"20000034957700017396094银行账户不存在"}]

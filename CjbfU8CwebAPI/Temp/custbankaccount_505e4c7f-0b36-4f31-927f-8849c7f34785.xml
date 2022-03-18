@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Ufinterface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" roottag="basdoc" billtype="bankaccount" replace="Y" receiver="001001" sender="gld" isexchange="Y" filename="custbankaccount_505e4c7f-0b36-4f31-927f-8849c7f34785.xml" proc="add">
+  <basdoc id="20000034957700017396094">
+    <basdoc_head>
+      <accattribute />
+      <accclass>2</accclass>
+      <accopendate>2019/11/4</accopendate>
+      <account>20000034957700017396094</account>
+      <accountcode>20000034957700017396094</accountcode>
+      <accountname>安徽三建公司_20000034957700017396094</accountname>
+      <accountproperty>0</accountproperty>
+      <accstate>0</accstate>
+      <acctype>0</acctype>
+      <accxhdate />
+      <arapprop>2</arapprop>
+      <areacode />
+      <bankarea />
+      <city />
+      <combineaccnum>123456</combineaccnum>
+      <concertedmny />
+      <contactpsn />
+      <corrgeneaccount />
+      <createtime>2019年11月4日</createtime>
+      <creator>13810071974</creator>
+      <custcode>0100012</custcode>
+      <def1 />
+      <def2 />
+      <def3 />
+      <def4 />
+      <def5 />
+      <def6 />
+      <def9 />
+      <def7 />
+      <def8 />
+      <def10 />
+      <def11 />
+      <def12 />
+      <def13 />
+      <def14 />
+      <def15 />
+      <def16 />
+      <def19 />
+      <def17 />
+      <def18 />
+      <def20 />
+      <defrozendate />
+      <frozendate />
+      <frozenje />
+      <fundform>1</fundform>
+      <genebranprop>2</genebranprop>
+      <groupaccount>N</groupaccount>
+      <groupid />
+      <isinneracc>N</isinneracc>
+      <mainaccount />
+      <memo />
+      <modifier />
+      <modifytime />
+      <netqueryflag>0</netqueryflag>
+      <orgnumber />
+      <ownercorp>001001</ownercorp>
+      <pk_bankdoc />
+      <pk_banktype>9999</pk_banktype>
+      <pk_corp>001001</pk_corp>
+      <pk_currtype>CNY</pk_currtype>
+      <pk_netbankinftp />
+      <pk_psnbasdoc />
+      <province />
+      <remcode />
+      <signflag>0</signflag>
+      <tel />
+      <unitname>安徽三建公司</unitname>
+    </basdoc_head>
+  </basdoc>
+</Ufinterface>

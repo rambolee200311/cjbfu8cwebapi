@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx?wsdl" docRef="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx" xmlns:q1="http://tempuri.org/" binding="q1:IntegrateServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://182.48.117.56:8888/GEPS/Integration/CW/WebService/IntegrateService.asmx" xmlns:q2="http://tempuri.org/" binding="q2:IntegrateServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

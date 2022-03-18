@@ -1,0 +1,32 @@
+2019-12-30 23:24:42,648 线程ID:[7] 日志级别:[INFO ] : [select djbh,djrq,shrq,spzt,paydate,zzzt,bbje,zyx1,zyx2,zyx3,zyx4,zyx5,zyx6,zyx7 from cmp_busibill where zzzt=1 and djdl='fj' and djlxbm='D5' and paydate>'2019-12-25']
+2019-12-30 23:24:42,671 线程ID:[7] 日志级别:[ERROR] : [DataHelper]
+System.Data.OleDb.OleDbException (0x80004005): [DBNETLIB][ConnectionOpen (Connect()).]SQL Server 不存在或拒绝访问。
+   在 System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   在 System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getDataTableFromSql(String sql) 位置 c:\app\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 63
+2019-12-30 23:24:42,691 线程ID:[7] 日志级别:[INFO ] : [select djbh,djrq,shrq,spzt,paydate,zzzt,bbje,zyx1,zyx2,zyx3,zyx4,zyx5,zyx6,zyx7 from cmp_busibill where zzzt=1 and djdl='fj' and djlxbm='D5' and paydate>'2019-12-25']
+2019-12-30 23:24:59,436 线程ID:[6] 日志级别:[ERROR] : [httppost error:]
+System.Net.WebException: 远程服务器返回错误: (500) 内部服务器错误。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 CjbfU8CwebAPI.Helper.PostResult.ConnectToServer(String serverPage, String billType, String opType, String key, String strData) 位置 c:\app\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\PostResult.cs:行号 87
+2019-12-30 23:31:41,453 线程ID:[6] 日志级别:[INFO ] : [select djbh,djrq,shrq,spzt,paydate,zzzt,bbje,zyx1,zyx2,zyx3,zyx4,zyx5,zyx6,zyx7 from cmp_busibill where zzzt=1 and djdl='fj' and djlxbm='D5' and paydate>'2019-12-25']
+2019-12-30 23:31:41,483 线程ID:[6] 日志级别:[ERROR] : [DataHelper]
+System.Data.OleDb.OleDbException (0x80004005): [DBNETLIB][ConnectionOpen (Connect()).]SQL Server 不存在或拒绝访问。
+   在 System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   在 System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 CjbfU8CwebAPI.Helper.DataHelper.getDataTableFromSql(String sql) 位置 c:\app\CjbfU8CwebAPI\CjbfU8CwebAPI\Helper\DataHelper.cs:行号 63
+2019-12-30 23:31:41,493 线程ID:[6] 日志级别:[INFO ] : [select djbh,djrq,shrq,spzt,paydate,zzzt,bbje,zyx1,zyx2,zyx3,zyx4,zyx5,zyx6,zyx7 from cmp_busibill where zzzt=1 and djdl='fj' and djlxbm='D5' and paydate>'2019-12-25']

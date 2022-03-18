@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ufinterface>
+  <szxm>
+    <type id="1" gld_code="劳务分包" u8c_code="LWFB"/>
+    <type id="2" gld_code="材料费" u8c_code="CLF"/>
+    <type id="3" gld_code="机械费" u8c_code="JXF"/>
+    <type id="4" gld_code="专业分包" u8c_code="ZYFB"/>
+    <type id="5" gld_code="其他" u8c_code="QTFY"/>
+  </szxm>
+  <jsfs>
+    <type id="1" gld_code="XJ" u8c_code="001"/>
+    <type id="2" gld_code="DH" u8c_code="004"/>
+    <type id="3" gld_code="ZP" u8c_code="00202"/>
+  </jsfs>
+  <start_paydate>2020-12-09</start_paydate>
+  <cmp_busibill>
+    <bill billID="" billModuleCode="" resultCode="" datetime="" resultMsg="" djbh=""/>
+  </cmp_busibill>
+</ufinterface>

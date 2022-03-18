@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<gepsInterface>
+	<voucher>
+		<billID>1006814</billID>
+		<billModuleCode>GEPS.Labor.Contract.LWFBFKSQDModule</billModuleCode>
+		<YWRQ>2019-11-13</YWRQ>
+		<JE>50000.00000000</JE>
+		<syncState>pay</syncState>
+		<syncTime>2019-12-31 11:20:00</syncTime>
+		<result>true</result>
+		<remark>成功</remark>
+	</voucher>
+</gepsInterface>

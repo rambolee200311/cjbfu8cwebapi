@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ufinterface billtype="bankaccount" filename="custbankaccount_db3dc72a-e4aa-401d-81ab-a8dfb02674c1.xml" isexchange="Y" proc="add" receiver="001001" replace="Y" roottag="sendresult" sender="gld" successful="N">
+  <sendresult>
+    <billpk>
+    </billpk>
+    <bdocid>
+    </bdocid>
+    <filename>
+    </filename>
+    <resultcode>-31102</resultcode>
+    <resultdescription>交换环境初始化异常:用户权限不足：用户无登录权限或用户无指定公司使用权限！</resultdescription>
+    <content>
+    </content>
+  </sendresult>
+</ufinterface>
