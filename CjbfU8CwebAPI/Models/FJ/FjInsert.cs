@@ -159,7 +159,7 @@ namespace CjbfU8CwebAPI.Models.Fj
                                     strSql = "select pk_bankaccbas from [dbo].[bd_bankaccbas] where pk_bankaccbas='" + pk_bankaccbas + "' and accountname!='" + item.ccusname + "' and accstate!=4";
                                     if (!string.IsNullOrEmpty(DataHelper.getStrResultFromSQLscript(strSql, "reader")))
                                     {
-                                        strSql = "update [dbo].[bd_bankaccbas set accountname='" + item.ccusname + "' where  pk_bankaccbas='" + pk_bankaccbas + "'";
+                                        strSql = "update [dbo].[bd_bankaccbas] set accountname='" + item.ccusname + "' where  pk_bankaccbas='" + pk_bankaccbas + "'";
                                         LogHelper.Default.WriteInfo(strSql);
                                         DataHelper.getStrResultFromSQLscript(strSql, "nonquery");
                                     }
@@ -173,8 +173,11 @@ namespace CjbfU8CwebAPI.Models.Fj
                                         String countCustAcc = DataHelper.getStrResultFromSQLscript("select count(pk_custbank) pk_custbank from bd_custbank where pk_cubasdoc='" + pk_cubasdoc + "'", "reader");
                                         if (Convert.ToInt32(countCustAcc) == 0)
                                         {
-
-                                            if (DataHelper.getStrResultFromSQLscript("select 1 from bd_custbank where pk_accbank='" + pk_bankaccbas + "' and pk_cubasdoc='" + pk_cubasdoc + "'", "reader") == "")
+                                            countCustAcc = DataHelper.getStrResultFromSQLscript("select count(pk_custbank) from bd_custbank where pk_accbank='"
+                                                + pk_bankaccbas 
+                                                //+ "select pk_bankaccbas from [dbo].[bd_bankaccbas] where accountcode='" + item.caccount + "' and accstate!=4"
+                                                + "' and pk_cubasdoc='" + pk_cubasdoc + "'", "reader");
+                                            if (countCustAcc == "0")
                                             {
                                                 strSql = "insert into bd_custbank (defflag,pk_accbank,pk_cubasdoc,pk_custbank) values('N','" + pk_bankaccbas + "','" + pk_cubasdoc + "','" + pk_cubasdoc.Substring(0, 12) + pk_cubasdoc.Substring(16, 4) + pk_bankaccbas.Substring(16, 4) + "')";
                                                 LogHelper.Default.WriteInfo(strSql);
@@ -183,7 +186,11 @@ namespace CjbfU8CwebAPI.Models.Fj
                                         }
                                         else
                                         {
-                                            if (DataHelper.getStrResultFromSQLscript("select 1 from bd_custbank where pk_accbank='" + pk_bankaccbas + "' and pk_cubasdoc='" + pk_cubasdoc + "'", "reader") == "")
+                                            countCustAcc = DataHelper.getStrResultFromSQLscript("select count(pk_custbank) from bd_custbank where pk_accbank in ("
+                                                //+ pk_bankaccbas 
+                                                + "select pk_bankaccbas from [dbo].[bd_bankaccbas] where accountcode='" + item.caccount + "' and accstate!=4"
+                                                + ") and pk_cubasdoc='" + pk_cubasdoc + "'", "reader");
+                                            if (countCustAcc == "0")
                                             {
                                                 voucher.result = "0";
                                                 voucher.remark = "银行账号不符请检查！";
